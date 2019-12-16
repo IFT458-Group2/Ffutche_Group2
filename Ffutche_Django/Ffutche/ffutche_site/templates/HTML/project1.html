@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>futcie foundation</title>
+<!--Assignment: Project 1------------>
+<!--Group: ------------>
+<!--Names: Nicholas Drake------------>
+<!-------------->
+<!--JS source to run Img Carousel--------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--Link for Bootstarp---------------------------------------->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--CSS for the login form-->
+<link rel="stylesheet" type="text/css" href="{% static 'HTML/site_style.css' %}">
+</head>
+<body>
+  <!--This is the login portion-->
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    </form>
+  </div>
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  <!--The link bar/dropdown list at the top-->
+  <div>
+  <ul class="nav justify-content-end">
+   <li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> Our Work</a>
+   <div class="dropdown-menu">
+     <a class="dropdown-item" href="#">Work 1</a>
+     <a class="dropdown-item" href="#">Work 2</a>
+     <a class="dropdown-item" href="#">Work 3</a>
+   </div>
+   <!--Top Navigation Bar-->
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="#"><i class="fa fa-photo"></i> Galeries</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="#"><i class="fa fa-globe"></i> About Us</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="#"><i class="fa fa-phone"></i> Contact Us</a>
+   </li>
+   <li class="nav-item">
+     <a onclick="document.getElementById('id01').style.display='block'" class="nav-link" href="#"><i class="fa fa-sign-in"></i> Sign In</a>
+   </li>
+   <!--Language selection dropdown-->
+    <select style="margin:5px;">
+    <option value="englis">Englis (EN)</option>
+    <option value="spanish">Spanish (SP)</option>
+    <option value="french">French (FR)</option>
+    </select>
+    <button type="button" name="button" style="margin:5px;">Go</button>
+  </ul>
+  </div>
+  <!--Futchie Foundation Area W/ Donation Button---->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="ffutche.png" class="img-fluid float-left" width="150" height="150">
+        <p class="text-center">Don't just act ... Impact!</p>
+        <button onclick="window.location.href='{% url 'registration' %}" class="btn btn-primary float-right" type="button" name="button" style="margin:24px;"><i class="fa fa-leaf"></i> Scholarship Registration</button>
+    </div>
+  </div>
+  <!---The Main Nav Bar------>
+  <div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-credit-card"></i> Donate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-graduation-cap"></i> Education and Training</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-medkit"></i> Health Care</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-cogs"></i> Food and Energy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="window.location.href='forms.html'"><i class="fa fa-cogs"></i> Other Forms</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+  <!--Picture Slide Show-->
+  <!--Images src from Adobe Stock Photos-->
+  <div class="container mt-3">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Wrapper for img slide -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="bushes-clouds-cloudy-1488393.jpg" alt="cloudy" style="width:100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="cloudy-cloudy-sky-daytime-1327335.jpg" alt="daytime" style="width:100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="bushes-clouds-cloudy-1488393.jpg" alt="cloudy" style="width:100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="cloudy-cloudy-sky-daytime-1327335.jpg" alt="daytime" style="width:100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="bushes-clouds-cloudy-1488393.jpg" alt="cloudy" style="width:100%;">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+<P style="margin-top:12px;"></P>
+  <!--text stuff on the bottom-->
+  <!--Using Lorem ipsum as the text filler-->
+
+  <div class="container-fluid">
+  <div class="row">
+        <div class="col-sm-4 text-justify" style="background-color:#e1e6ed; padding:50px;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-sm-4 text-justify" style="padding:50px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-sm-4 text-justify" style="background-color:#e1e6ed; padding:50px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+  </div>
+  &nbsp;
+  <div class="row" style="padding-top:100px;">
+      <div class="col" style="padding-left: 50px;">
+        <p><b>Ffutche Foundation</b></p>
+        <p>Address:</p>
+        <p>1234 E Access Dr</p>
+        <p>Tempe, AZ 85282</p>
+        <p>Email: <a href="#">contact@ffutche.com</a></p>
+        <p>Phone: (602) 555-1234</p>
+      </div>
+      &nbsp;
+      <div class="col text-center">
+        <a href="#">Get Involved</a><br>
+        &nbsp;
+        <a href="#">Blog</a><br>
+        &nbsp;
+        <a href="#">Ways To Give</a>
+      </div>
+      <div class="col text-center">
+        <a href="#">Financial Data</a><p>Coming Soon!</p>
+        <a href="#">Other Finances</a><p>Coming Soon!</p>
+
+      </div>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+
+    </div>
+  </div>
+
+</body>
+</html>

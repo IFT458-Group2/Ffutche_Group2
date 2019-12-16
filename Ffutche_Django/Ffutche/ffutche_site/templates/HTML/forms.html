@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<p></p>
+<h2>Ffutche</h2>
+<p></p>
+
+<button type="button" class="collapsible">Donnor Form</button>
+<!--Donor Form-->
+<div class="content">
+  <form action="/action_page.php">
+    <div class="container">
+      <h1>Donnor Form</h1>
+      <p>Please fill in this donor form.</p>
+      <hr>
+
+      <label for="firstname"><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="firstname" required>
+
+      <label for="lastname"><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="lastname" required>
+
+      <label for="occupation"><b>Occupation</b></label>
+      <input type="text" placeholder="Occupation" name="occupation" required>
+
+      <label for="address"><b>Address</b></label>
+      <input type="text" placeholder="Address" name="address" required>
+
+      <label for="phn_num"><b>Phone Number</b></label>
+      <input type="text" placeholder="Phone Number" name="phn_num" required>
+      <hr>
+      <p>By submitting a Donor Form you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <button type="submit" class="registerbtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+<!--Schools-->
+<button type="button" class="collapsible">Scholarships</button>
+<div class="content">
+  <form action="/action_page.php">
+    <div class="container">
+      <h1>Scholarship Form</h1>
+      <p>Please fill in this Scholarship form.</p>
+      <hr>
+
+      <label for="firstname"><b>Student First Name</b></label>
+      <input type="text" placeholder="First Name" name="firstname" required>
+
+      <label for="lastname"><b>Student Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="lastname" required>
+
+      <label for="occupation"><b>School</b></label>
+      <input type="text" placeholder="School" name="occupation" required>
+
+      <label for="address"><b>School Address</b></label>
+      <input type="text" placeholder="Address" name="address" required>
+
+      <label for="phn_num"><b>School Phone Number</b></label>
+      <input type="text" placeholder="Phone Number" name="phn_num" required>
+
+      <label for="ed_lvl"><b>Education Level</b></label>
+      <input type="text" placeholder="Education Level" name="ed_lvl" required>
+
+      <label for="scholarship_type"><b>Scholarship Type</b></label>
+      <input type="text" placeholder="Type" name="scholarship_type" required>
+      <hr>
+      <p>By submitting a scholarship Form you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <button type="submit" class="registerbtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+<!--Schools-->
+<button type="button" class="collapsible">Schools</button>
+<div class="content">
+  <form action="/action_page.php">
+    <div class="container">
+      <h1>School Info</h1>
+      <p>Please fill in this school information form.</p>
+      <hr>
+
+      <label for="firstname"><b>School Name</b></label>
+      <input type="text" placeholder="First Name" name="firstname" required>
+
+      <label for="address"><b>Address</b></label>
+      <input type="text" placeholder="Address" name="address" required>
+
+      <label for="phn_num"><b>Phone Number</b></label>
+      <input type="text" placeholder="Phone Number" name="phn_num" required>
+      <hr>
+      <p>By submitting a school information form you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <button type="submit" class="registerbtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+<!--School Tuition-->
+<button type="button" class="collapsible">School Tuition & Fees</button>
+<div class="content">
+  <form action="/action_page.php">
+    <div class="container">
+      <h1>Tuition Form</h1>
+      <p>Please fill in this form.</p>
+      <hr>
+
+      <label for="expenses"><b>Expenses</b></label>
+      <input type="text" placeholder="Expenses" name="expenses" required>
+
+      <label for="tuition"><b>Tuition</b></label>
+      <input type="text" placeholder="Tution" name="tuition" required>
+
+      <label for="books"><b>Books</b></label>
+      <input type="text" placeholder="Books" name="books" required>
+
+      <label for="loans"><b>Loans</b></label>
+      <input type="text" placeholder="Loans" name="loans" required>
+
+      <label for="othersource"><b>Other Source</b></label>
+      <input type="text" placeholder="Other Source" name="othersource" required>
+      <hr>
+      <p>By submitting a tuition form you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <button type="submit" class="registerbtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
